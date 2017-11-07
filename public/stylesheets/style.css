@@ -44,6 +44,19 @@ code {
 .tweetbox {
   padding: 7px;
 }
+.tweet{
+  margin-bottom: 20px;
+}
+.tweet-image {
+  float: left;
+  clear: left;
+  margin-right: 20px;
+}
+.tweet-text {
+  display: inline-block;
+  margin-top: -5px;
+
+}
 
 .tweetbox img {
   float: left;

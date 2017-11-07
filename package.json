@@ -17,10 +17,12 @@
   },
   "homepage": "https://github.com/wrcs505/twitter-js#readme",
   "dependencies": {
+    "body-parser": "^1.18.2",
     "chalk": "^2.3.0",
     "express": "^4.16.2",
     "lodash": "^4.17.4",
     "nunjucks": "^3.0.1",
+    "socket.io": "^2.0.4",
     "volleyball": "^1.4.1"
   }
 }
