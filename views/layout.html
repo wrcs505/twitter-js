@@ -91,9 +91,15 @@
     // When 'new_tweet' events are fired, do something with the packaged tweet
     socket.on('newTweet', function (tweet) {
       var  tweets = document.getElementById("tweets")
-      var html = `<h6><a href="/users/${tweet.name}}">${tweet.name}</a></h6>
-      <li>${tweet.text}</li>`
+      var html = `<div class="tweet-image">
+                    <img src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg">
+                  </di>
+                  </div class="tweet-text">
+                    <h6><a href="/users/${tweet.name}}">${tweet.name}</a></h6>
+                    <h6>${tweet.text}</h6>
+                  </div>`
       var div = document.createElement('div')
+      div.className = "tweet"
       div.innerHTML = html
 
       tweets.appendChild(div)
@@ -101,3 +107,13 @@
     });
   </script>
 </html>
+<div class="tweet">
+  <div class="tweet-image">
+    <img src="https://pbs.twimg.com/profile_images/2450268678/olxp11gnt09no2y2wpsh_normal.jpeg">
+  </div>
+  <div class="tweet-text">
+    <h6><a href="/users/{{tweet.name}}">{{tweet.name}}</a></h6>
+    <h6>{{tweet.content}}</h6>
+  </div>
+
+</div>
