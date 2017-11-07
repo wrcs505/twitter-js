@@ -3,7 +3,7 @@ const _ = require('lodash');
 const data = []
 
 function add (name, content) {
-  data.push({ name: name, content: content });
+  data.push({ name: name, content: content, id: data.length+1 || 1});
 }
 
 function list () {
@@ -35,4 +35,9 @@ for (let i = 0; i < 10; i++) {
   module.exports.add( getFakeName(), getFakeTweet() );
 }
 
+module.exports.add('Deshaun Watson', 'the the only one legged man to win an ass kicking contest')
+
+module.exports.add('Deshaun Watson', '3-0 vs South Carolina')
+
 console.log(data)
+
